@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SubAddress Generator — Privacy Policy</title>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        line-height: 1.6;
+        max-width: 720px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+        color: #1a1a24;
+      }
+      h1 {
+        font-size: 1.5rem;
+      }
+      h2 {
+        font-size: 1.1rem;
+        margin-top: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>SubAddress Generator — Privacy Policy</h1>
+    <p><strong>Last updated:</strong> September 2026</p>
+
+    <p>
+      SubAddress Generator is a browser extension that helps you create unique email subaddresses
+      (plus addressing) for testing websites and applications.
+    </p>
+
+    <h2>Data collection</h2>
+    <p>
+      We do <strong>not</strong> collect, transmit, sell, or share your personal data with us or
+      any third party. The extension has no backend, analytics, telemetry, or accounts.
+    </p>
+
+    <h2>Data stored on your device</h2>
+    <p>The extension uses <code>chrome.storage.local</code> only on your computer to save:</p>
+    <ul>
+      <li>Your primary email, prefix, suffix, and last selected template (optional convenience)</li>
+      <li>Custom templates you create</li>
+      <li>Recent generated email strings (only if you enable history)</li>
+    </ul>
+    <p>This data never leaves your browser except when you copy an address to the clipboard yourself.</p>
+
+    <h2>Permissions</h2>
+    <ul>
+      <li><strong>storage</strong> — save settings and optional history locally</li>
+      <li><strong>activeTab</strong> — read the current tab URL when generating (for template rules)</li>
+      <li><strong>contextMenus</strong> — “Generate email” on form fields</li>
+      <li>
+        <strong>Content scripts on web pages</strong> — show a helper control near email fields and
+        insert or copy generated addresses when you ask. No page content is sent to any server.
+      </li>
+    </ul>
+
+    <h2>Contact</h2>
+    <p>
+      For privacy questions, open an issue or contact the developer through the extension’s Chrome
+      Web Store listing support link.
+    </p>
+  </body>
+</html>

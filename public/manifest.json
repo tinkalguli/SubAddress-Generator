@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "SubAddress Generator",
+  "version": "1.0.0",
+  "description": "Generate unique, configurable email subaddresses for testing websites and applications.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "SubAddress Generator",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "service_worker": "background/service-worker.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content/content-script.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": ["storage", "activeTab", "contextMenus"],
+  "commands": {
+    "generate-email": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+E",
+        "mac": "Command+Shift+E"
+      },
+      "description": "Generate subaddress email"
+    }
+  }
+}
